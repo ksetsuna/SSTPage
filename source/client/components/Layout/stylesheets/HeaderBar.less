@@ -1,0 +1,63 @@
+.header_bar{
+  width: 100%;
+  color: white;
+  justify-content: space-between;
+
+  .logo img {
+    width: 300px;
+  }
+
+  .top_nav {
+    margin: 40px 40px 0 0;
+
+    a {
+      margin: 0 0.6em;
+      display: block;
+      line-height: 1em;
+
+      &:link, &:visited{
+        color: white;
+        font-size: 1.2em;
+        text-decoration: none;
+      }
+
+      &:link::before,    &:link::after,
+      &:visited::before, &:visited::after {
+        content: '\feff';
+        top: 1px;
+        height: 1em;
+        width: 0.3em;
+        border-color: gold;
+        border-width: 2px;
+        border-style: solid;
+        opacity: 0;
+        display: inline-block;
+        transition: all 300ms;
+        position: relative;
+      }
+
+      &:link::before {
+        border-width: 3px 0 3px 3px;
+        transform: translate(10px, 0) scale(0.75);
+      }
+
+      &:link::after {
+        border-width: 3px 3px 3px 0;
+        transform: translate(-10px, 0) scale(0.75);
+      }
+
+      &:hover::before, &:hover::after {
+        opacity: 1;
+      }
+
+      &:hover::before {
+        transform: translate(-13px, 0) scale(0.85);
+      }
+
+      &:hover::after {
+        transform: translate(13px, 0) scale(0.85);
+      }
+    }
+  }
+}
+

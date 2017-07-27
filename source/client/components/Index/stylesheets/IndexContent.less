@@ -1,0 +1,53 @@
+.fix-card-width (@width: 100%) {
+	div[class|=MuiGrid-typeItem] {
+		width: @width;	
+	}
+}
+
+.index_content {
+  h2 {
+    line-height: 2em;
+  }
+
+  .tutor_introduction {
+    //color: white;
+    box-shadow: 0 -40px 40px rgba( 10, 26,  45, 0.4);
+    position: relative;
+  }
+
+  .tutor_introduction_content {
+    max-width: 1000px;
+    margin: 0 auto;
+    align-items: center;
+
+    .face_img {
+      border-width: 8px;
+    }
+
+    .main_text {
+      margin-left: 2em;
+      font-size: 1.05em;
+      line-height: 1.8em;
+      //text-shadow: 0 0 6px rgba(255,255,255,0.7);
+    }
+  }
+
+  .paper_introduction {
+    .fix-card-width(100%);
+    background-attachment: fixed;
+    box-shadow: 0  15px 20px -10px rgba(72, 0, 155, 0.1) inset,
+                0 -15px 20px -10px rgba(72, 0, 155, 0.1) inset;
+
+    .face_list {
+      padding-right: 15px;
+    }
+
+    div[class|=MuiCard-root-] {
+      background: rgba(255,255,255,0.9);
+    }
+  }
+
+  .recent_research {
+    .fix-card-width(50%);
+  }
+}

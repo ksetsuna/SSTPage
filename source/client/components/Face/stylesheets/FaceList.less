@@ -1,0 +1,25 @@
+.face_list{
+  width: 100%;
+  justify-content: flex-end;
+
+  ul {
+    padding: 0;
+    padding-right: 1em;
+    list-style: none;
+  }
+
+  li {
+    margin: 0 2px;
+    transition: all 300ms;
+  }
+
+  &.fold {
+    &:hover li {
+      margin: 0 2px;
+    }
+
+    li {
+      margin-right: -1em;
+    }
+  }
+}
