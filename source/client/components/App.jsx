@@ -15,10 +15,10 @@ class App extends React.Component{
   constructor(props){
     super(props)
 
-    if(this.props.serverRequest) 
+    if(this.props.serverRequest)
       theme.userAgent = this.props.serverRequest.headers['user-agent'];
   }
- 
+
   componentDidMount(){
     injectTapEventPlugin();
   }

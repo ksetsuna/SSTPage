@@ -18,10 +18,7 @@ const commonLoaders = [
     {
         test: /\.(js|jsx)$/,
         loader: 'babel-loader',
-        exclude: /(node_modules|bower_components)/,
-        query: {
-            presets: ['react', 'es2015']
-        }
+        exclude: /(node_modules|bower_components)/
     },
     {
         test: /\.(less|css)$/,
