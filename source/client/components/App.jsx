@@ -6,10 +6,10 @@ import theme from './theme'
 
 import injectTapEventPlugin from 'react-tap-event-plugin'
 
-import Layout from '../Layout/Layout'
+import Layout from './Layout'
 
-import '../../modules/normalize.css'
-import '../../modules/main.less'
+import '../modules/normalize.css'
+import '../modules/main.less'
 
 class App extends React.Component{
   constructor(props){

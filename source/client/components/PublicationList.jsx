@@ -1,11 +1,11 @@
 import React from 'react'
 
-import configuration from '../../../../configuration'
-import fetchJson from '../../../modules/fetchJson'
-import ssr from '../../modules/ssrComponent'
+import configuration from '../../../configuration'
+import fetchJson from '../../modules/fetchJson'
+import ssr from '../modules/ssrComponent'
 
 import PublicationListItem from './PublicationListItem'
-import './stylesheets/PublicationList.less'
+import './PublicationList.less'
 
 class Publication extends React.Component{
   constructor(props){

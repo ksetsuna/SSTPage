@@ -1,6 +1,6 @@
 import React from 'react'
 
-import ssr from '../../modules/ssrComponent'
+import ssr from '../modules/ssrComponent'
 
 class NotFoundPage extends React.Component{
   constructor(props){

@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
-import './stylesheets/HeaderBar.less'
+import './HeaderBar.less'
 
 class HeaderBar extends React.Component {
   constructor(props) {
@@ -12,7 +12,7 @@ class HeaderBar extends React.Component {
     return (
       <header className="header_bar flexbox">
         <div className="logo">
-          <Link to="/"><img src={require('./images/logo.svg')} alt="logo" /></Link>
+          <Link to="/"><img src={require('./Layout/images/logo.svg')} alt="logo" /></Link>
         </div>
         <nav className="top_nav flexbox">
           <Link to="/member/">团队成员</Link>

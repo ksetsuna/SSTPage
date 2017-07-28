@@ -7,7 +7,7 @@ import template from './template'
 import loadPageData from './loadPageData'
 import packageBrowserPageData from './packageBrowserPageData'
 
-import App from '../../../client/components/App/App'
+import App from '../../../client/components/App'
 
 const renderPage = (req, res) => {
   let helmet, pageData;

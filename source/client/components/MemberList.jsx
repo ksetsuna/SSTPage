@@ -2,10 +2,10 @@ import React from 'react'
 
 import MemberListUnit from './MemberListUnit'
 
-import fetchJson from '../../../modules/fetchJson'
-import ssr from '../../modules/ssrComponent'
+import fetchJson from '../../modules/fetchJson'
+import ssr from '../modules/ssrComponent'
 
-import './stylesheets/MemberList.less'
+import './MemberList.less'
 
 class MemberList extends React.Component{
   constructor(props) {

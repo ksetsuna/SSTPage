@@ -2,7 +2,7 @@ import React from "react"
 
 import Face from './Face'
 
-import './stylesheets/faceList.less'
+import './FaceList.less'
 
 class FaceList extends React.Component{
   constructor(props){

@@ -1,12 +1,12 @@
 import React from 'react'
 
-import Face from '../Face/Face'
+import Face from './Face'
 
 class MemberListUnit extends React.Component{
   constructor() {
     super()
 
-    this.emailIcon = require('../Icon/Images/email.svg');
+    this.emailIcon = require('./Icon/Images/email.svg');
 
   }
   render(){

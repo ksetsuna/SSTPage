@@ -1,7 +1,7 @@
 import React from 'react'
 
 import JournalIcon from './JournalIcon'
-import FaceList from '../Face/FaceList'
+import FaceList from './FaceList'
 
 class PublicationListItem extends React.Component{
   render(){

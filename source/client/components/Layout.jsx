@@ -3,11 +3,11 @@ import { Route, Switch } from 'react-router'
 import { Helmet } from 'react-helmet'
 
 import HeaderBar from './HeaderBar'
-import LineButton from '../LineButton/LineButton'
-import SectionContainer from '../SectionContainer/SectionContainer'
+import LineButton from './LineButton'
+import SectionContainer from './SectionContainer'
 
-import routerInfo from '../../../modules/routing'
-import './stylesheets/Layout.less'
+import routerInfo from '../../modules/routing'
+import './Layout.less'
 
 class Layout extends React.Component{
   constructor(props){
@@ -57,7 +57,7 @@ class Layout extends React.Component{
           <title>人际间语言交流的脑活动同步机制课题</title>
         </Helmet>
         <SectionContainer additionalClassName={this.state.rootElementClassName}
-                          containerBackground={require('./images/headerBackground.jpg')}>
+                          containerBackground={require('./Layout/images/headerBackground.jpg')}>
           {this.state.backgroundElement}
           <HeaderBar />
           <section className="introduction">
@@ -79,7 +79,7 @@ class Layout extends React.Component{
         </div>
         <footer className="bottom_section">
           <div className="logo">
-            <img src={require('./images/footerLogo.png')} alt="logo of BNU and our lab." />
+            <img src={require('./Layout/images/footerLogo.png')} alt="logo of BNU and our lab." />
           </div>
           <div className="info">
             <p>版权所有 ©2016-{year} 北京师范大学脑与认知科学学院 · 人际间语言交流的脑活动同步机制课题组保留所有权利。</p>

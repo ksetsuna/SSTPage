@@ -1,9 +1,9 @@
 import fetch from 'isomorphic-fetch'
 
-import Index from '../client/components/Index/Index'
-import MemberList from '../client/components/Member/MemberList'
-import PublicationList from '../client/components/Publication/PublicationList'
-import NotFoundPage from '../client/components/NotFoundPage/NotFoundPage'
+import Index from '../client/components/Index'
+import MemberList from '../client/components/MemberList'
+import PublicationList from '../client/components/PublicationList'
+import NotFoundPage from '../client/components/NotFoundPage'
 
 import configuration from '../../configuration'
 

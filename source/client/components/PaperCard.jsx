@@ -4,15 +4,15 @@ import Card, { CardActions, CardContent, CardMedia } from 'material-ui/Card'
 import Button from 'material-ui/Button'
 import Typography from 'material-ui/Typography'
 
-import FaceList from '../Face/FaceList'
+import FaceList from './FaceList'
 
-import './stylesheets/PaperCard.less'
+import './PaperCard.less'
 
 class PaperCard extends React.Component{
   constructor(props){
     super(props);
 
-    this.listData = require('../Face/library/queryPeopleInfo').default;
+    this.listData = require('./queryPeopleInfo').default;
   }
 
   render(){

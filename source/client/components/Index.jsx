@@ -1,19 +1,19 @@
 import React from 'react'
 import { Helmet } from 'react-helmet'
 
-import Face from '../Face/Face'
-import LineButton from '../LineButton/LineButton'
-import SectionContainer from '../SectionContainer/SectionContainer'
+import Face from './Face'
+import LineButton from './LineButton'
+import SectionContainer from './SectionContainer'
 
 import PaperCard from './PaperCard'
 import ResearchSimpleCard from './ResearchSimpleCard'
 
 import Grid from 'material-ui/Grid'
 
-import routerInfo from '../../../modules/routing'
-import ssr from '../../modules/ssrComponent'
+import routerInfo from '../../modules/routing'
+import ssr from '../modules/ssrComponent'
 
-import './stylesheets/IndexContent.less'
+import './IndexContent.less'
 
 class IndexContent extends React.Component{
   constructor(props){
@@ -74,7 +74,7 @@ this.researches = [
         <title>首页</title>
       </Helmet>
       <SectionContainer additionalClassName="tutor_introduction"  containerName="导师介绍"
-              containerBackground={require('./images/tutorIntroductionBackground.jpg')}>
+              containerBackground={require('./Index/images/tutorIntroductionBackground.jpg')}>
         <div className="tutor_introduction_content flexbox">
           <Face faceImage="LCM.png" faceSize="large" />
           <div className="main_text flexbox">
@@ -94,7 +94,7 @@ this.researches = [
         <LineButton buttonContent="所有成员" buttonLink="/#" additionalClassName="dark"/>
       </SectionContainer>
       <SectionContainer additionalClassName="paper_introduction" containerName="学术论文"
-              containerBackground={require('./images/publishBackground.jpg')}>
+              containerBackground={require('./Index/images/publishBackground.jpg')}>
         <Grid container gutter={24}>
           {
           this.papers.map(i => (
@@ -107,7 +107,7 @@ this.researches = [
         <LineButton buttonContent="更多论文" buttonLink="/#" additionalClassName="dark"/>
         </SectionContainer>
         <SectionContainer additionalClassName="recent_research" containerName="近期研究"
-                containerBackground={require('./images/recentResearchBackground.jpg')}>
+                containerBackground={require('./Index/images/recentResearchBackground.jpg')}>
         <Grid container gutter={24}>
           {
           this.researches.map(i => (

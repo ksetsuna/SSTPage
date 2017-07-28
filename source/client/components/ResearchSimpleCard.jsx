@@ -2,7 +2,7 @@ import React from "react"
 
 import Paper from 'material-ui/Paper';
 
-import './Stylesheets/ResearchSimpleCard.less'
+import './ResearchSimpleCard.less'
 
 class ResearchSimpleCard extends React.Component{
   constructor(props) {
