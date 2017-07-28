@@ -30,6 +30,8 @@ const commonLoaders = [
         }),
 
         include: path.resolve(__dirname, 'source')
+    }, {
+        test: /\.yml|\.yaml$/, use: ['json-loader', 'yaml-loader']
     }
 ];
 

@@ -1,0 +1,78 @@
+- name: 卢春明
+  identity: Lu, Chunming
+  title: 副教授
+  group: T
+  image: LCM.png
+  researchDirection: 人际语言交流的脑活动同步机制
+- name: 丁国盛
+  identity: Ding, Guosheng
+  title: 教授
+  group: T
+  image: LCM.png
+  researchDirection: 语言功能的神经基础
+- name: 赵慧
+  identity: Zhao, Hui
+  title: 硕士生
+  group: S
+  image: SAMPLE2.png
+  researchDirection: 亲子互动过程中的脑同步
+- name: 李侃宇
+  identity: Li, Kanyu
+  title: 硕士生
+  group: S
+  image: LKY.jpg
+  researchDirection: 服务器心理咨询学
+- name: 刘丽
+  identity: Liu, Li
+  title: 副教授
+  group: T
+  image: LCM.png
+  researchDirection: 脑与阅读发展
+- name: 郑丽芬
+  identity: Zheng, Lifen
+  title: 博士生
+  group: S
+  image: SAMPLE.png
+  researchDirection: 师生互动中的脑活动同步
+- name: 周思远
+  identity: Zhou, Siyuan
+  title: 硕士生
+  group: S
+  image: placeholder.jpg
+  researchDirection: 创造力的脑机制
+- name: 郭桃梅
+  identity: Guo, Taomei
+  title: 教授
+  group: T
+  image: LCM.png
+  researchDirection: 人际语言交流的脑活动同步机制
+- name: 刘文达
+  identity: Liu, Wenda
+  title: 硕士生
+  group: S
+  image: placeholder.jpg
+  researchDirection: 句法启动的脑机制
+- name: 白夏露
+  identity: Bai, Xialu
+  title: 硕士生
+  group: S
+  image: SAMPLE.png
+  researchDirection: 交易行为中的脑活动同步
+- name: 龙宇航
+  identity: Long, Yuhang
+  title: 博士生
+  group: S
+  image: SAMPLE2.png
+  researchDirection: 情侣交流过程的脑活动同步
+- name: 南云
+  identity: Nan, Yun
+  title: 副教授
+  group: T
+  image: LCM.png
+  researchDirection: 音乐认知的脑机制
+- name: 张语轩
+  identity: Zhang, Yuxuan
+  title: 副教授
+  group: T
+  image: LCM.png
+  researchDirection: 人际语言交流的脑活动同步机制
