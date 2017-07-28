@@ -30,7 +30,7 @@ const commonLoaders = [
 
     include: path.resolve(__dirname, 'source')
   }
-]
+];
 
 const fileLoadersForClient = [
   {
@@ -41,7 +41,7 @@ const fileLoadersForClient = [
     test: /\.svg$/,
     loader: 'file-loader?name=/assets/[hash].[ext]'
   }
-]
+];
 
 const fileLoadersForServer = fileLoadersForClient.map(i => {
   let iCopy;
@@ -58,7 +58,7 @@ const fileLoadersForServer = fileLoadersForClient.map(i => {
 
 const commonResolve = {
   extensions: ['.js', '.jsx', '.json']
-}
+};
 
 
 module.exports = [{

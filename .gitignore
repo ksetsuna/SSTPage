@@ -51,3 +51,7 @@ deployment/*
 
 # Fuck Windows
 Thumbs.db
+
+# Idea
+/.idea
+*.iml
