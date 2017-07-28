@@ -26,7 +26,7 @@ class MemberList extends React.Component{
   constructMemberUnit(group) {
     return this.state.memberList.filter(member => member.group === group)
                                 .map(member => (
-                                    <MemberListUnit key={member.__filename}
+                                    <MemberListUnit key={member.__fileName}
                                                     faceImage={member.image} name={member.name}
                                                     title={member.title} researchDirection={member.researchDirection} />
                                   ))
