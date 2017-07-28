@@ -67,7 +67,7 @@ class Layout extends React.Component{
             </p>
             <LineButton buttonContent="了解更多" buttonLink="/#" />
           </section>
-          <h1>{this.state.pageTitle}</h1>
+          <h1 className="page_title">{this.state.pageTitle}</h1>
         </SectionContainer>
         <div className="page_content">
           <Switch>

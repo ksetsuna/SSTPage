@@ -1,19 +1,22 @@
 .top_section {
-  padding: 35px;
+  @section-padding: 35px;
+  padding: @section-padding;
   min-height: 500px;
 	background-attachment: fixed;
   transition: all 400ms;
+  position: relative;
 
   .introduction {
     max-height: 0;
     color: white;
+    margin: 7em auto 2em auto;
     overflow: hidden;
     transition: all 800ms;
     visibility: hidden;
 
     .main_text {
       max-width: 950px;
-      margin: 7em auto 2em auto;
+      margin: 0 auto;
       font-size: 1.4em;
       line-height: 2.2em;
       text-align: center;
@@ -24,9 +27,28 @@
     }
   }
 
-  &.root_page .introduction {
-    max-height: 1000px;
-    visibility: visible;
+  .page_title {
+    bottom: @section-padding;
+    left: @section-padding;
+    width: 25%;
+    margin-left: 0;
+    color: white;
+    font-size: 2.5em;
+    font-weight: normal;
+    position: absolute;
+    transition: all 300ms ease-in-out 300ms;
+  }
+
+  &.root_page{
+    .introduction {
+      max-height: 200px;
+      visibility: visible;
+    }
+
+    .page_title {
+      margin-left: -50%;
+      transition: all 300ms ease-in-out;
+    }
   }
 }
 
