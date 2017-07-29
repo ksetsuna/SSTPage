@@ -1,28 +1,14 @@
 import _ from 'lodash';
 import React from 'react'
-import data from '../../data';
+
+import {connect} from 'react-redux'
 import './PublicationList.less'
-
 import PublicationListItem from './PublicationListItem'
-
-const d1 = _.keyBy(data.members, 'identity');
-const d2 = _.keyBy(data.journals, 'name');
-
-// todo replate data source
-const publications = data.publications.map(p => ({
-        ...p,
-        authors: p.authors.map(id => d1[id] || {name: id, __offStaff: true}),
-        icon: d2[p.journal].icon
-    })
-);
 
 
 class Publication extends React.Component {
-
-
     render() {
-
-        const publicationList = publications;
+        const {publicationList} = this.props;
         return (
             <div>
                 <h2>学术论文</h2>
@@ -37,4 +23,14 @@ class Publication extends React.Component {
     }
 }
 
-export default Publication
+export default connect(data => {
+    const d1 = _.keyBy(data.members, 'identity');
+    const d2 = _.keyBy(data.journals, 'name');
+    const publicationList = data.publications.map(p => ({
+            ...p,
+            authors: p.authors.map(id => d1[id] || {name: id, __offStaff: true}),
+            icon: d2[p.journal].icon
+        })
+    );
+    return {publicationList};
+})(Publication)

@@ -9,6 +9,7 @@ import '../modules/normalize.css'
 import Layout from './Layout'
 import theme from './theme'
 
+
 class App extends React.Component {
 
 
@@ -20,7 +21,7 @@ class App extends React.Component {
     render() {
         return (
             <MuiThemeProvider muiTheme={theme}>
-                <Layout initPathname={this.props.initPathname}/>
+                <Layout/>
             </MuiThemeProvider>
         )
     }

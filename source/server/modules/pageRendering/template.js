@@ -1,4 +1,4 @@
-const template =  ({ body, helmet, pageData }) => {
+const template =  ({ body, helmet, initialState }) => {
   return `
     <!DOCTYPE html>
     <html ${helmet.htmlAttributes.toString()}>
@@ -12,7 +12,7 @@ const template =  ({ body, helmet, pageData }) => {
       
       <body ${helmet.bodyAttributes.toString()}>
         <div id="root">${body}</div>
-        <script>window.__pageData = JSON.parse('${pageData}');window.__directMark = true;</script>
+        <script>window.__initialState = ${initialState};</script>
         <script type="text/javascript" src="/assets/bundle.js"></script>
       </body>
     </html>

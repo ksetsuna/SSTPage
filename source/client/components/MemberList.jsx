@@ -1,7 +1,7 @@
 import _ from 'lodash';
 import React from 'react'
 
-import data from '../../data';
+import {connect} from 'react-redux'
 
 import './MemberList.less'
 
@@ -11,19 +11,19 @@ class MemberList extends React.Component {
     constructor(props) {
         super(props);
 
-        // todo replate data source
-        this.groups = _.groupBy(data.members, 'group');
+
     }
 
 
     render() {
+        const {groups} = this.props;
         return (
             <div>
                 <section>
                     <h2 className="member_list_title">PI组成员</h2>
                     <ul className="member_list">
                         {
-                            this.groups.T.map(member => (
+                            groups.T.map(member => (
                                 <MemberListUnit key={member.name}
                                                 faceImage={member.image} name={member.name}
                                                 title={member.title} researchDirection={member.researchDirection}/>
@@ -35,7 +35,7 @@ class MemberList extends React.Component {
                     <h2 className="member_list_title">导师组成员</h2>
                     <ul className="member_list">
                         {
-                            this.groups.S.map(member => (
+                            groups.S.map(member => (
                                 <MemberListUnit key={member.name}
                                                 faceImage={member.image} name={member.name}
                                                 title={member.title} researchDirection={member.researchDirection}/>
@@ -48,4 +48,6 @@ class MemberList extends React.Component {
     }
 }
 
-export default MemberList
+export default connect(
+    x => ( {groups: _.groupBy(x.members, 'group')})
+)(MemberList)

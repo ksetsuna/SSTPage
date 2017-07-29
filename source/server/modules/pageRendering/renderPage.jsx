@@ -4,31 +4,31 @@ import {Helmet} from 'react-helmet'
 import {redirect, StaticRouter} from 'react-router'
 
 import App from '../../../client/components/App'
-import loadPageData from './loadPageData'
-import packageBrowserPageData from './packageBrowserPageData'
+
 
 import template from './template'
+import data from '../../../data'
+
+import {Provider} from 'react-redux'
+import {createStore} from 'redux'
 
 const renderPage = (req, res) => {
-    let helmet, pageData;
-
-    helmet = Helmet.renderStatic();
-    pageData = loadPageData(req.url);
-
-    let markup;
+    const helmet = Helmet.renderStatic();
 
     const context = {};
 
-    markup = renderToString(
-        <StaticRouter context={context} location={req.url}>
-            <App/>
-        </StaticRouter>
+    const markup = renderToString(
+        <Provider store={createStore(x => x, data)}>
+            <StaticRouter context={context} location={req.url}>
+                <App/>
+            </StaticRouter>
+        </Provider>
     );
 
     res.send(template({
         body: markup,
         helmet: helmet,
-        pageData: packageBrowserPageData(pageData.string),
+        initialState: JSON.stringify(data),
     }));
 }
 
