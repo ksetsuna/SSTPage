@@ -1,11 +1,11 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import { BrowserRouter } from 'react-router-dom'
+import {BrowserRouter} from 'react-router-dom'
 
 import App from './components/App'
 
 ReactDOM.render((
-  <BrowserRouter>
-    <App initPathname={window.location.pathname}/>
-  </BrowserRouter>
-),document.querySelector('#root'));
+    <BrowserRouter>
+        <App/>
+    </BrowserRouter>
+), document.querySelector('#root'));

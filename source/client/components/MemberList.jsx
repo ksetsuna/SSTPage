@@ -10,13 +10,11 @@ import MemberListUnit from './MemberListUnit'
 class MemberList extends React.Component {
     constructor(props) {
         super(props);
+
+        // todo replate data source
         this.groups = _.groupBy(data.members, 'group');
     }
 
-    componentDidMount() {
-        if(this.props.switchBackground)
-            this.props.switchBackground('Hello!', (<div/>));
-    }
 
     render() {
         return (
@@ -50,4 +48,4 @@ class MemberList extends React.Component {
     }
 }
 
-export default  MemberList
+export default MemberList

@@ -8,6 +8,7 @@ import PublicationListItem from './PublicationListItem'
 const d1 = _.keyBy(data.members, 'identity');
 const d2 = _.keyBy(data.journals, 'name');
 
+// todo replate data source
 const publications = data.publications.map(p => ({
         ...p,
         authors: p.authors.map(id => d1[id] || {name: id, __offStaff: true}),

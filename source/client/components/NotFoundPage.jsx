@@ -1,15 +1,5 @@
 import React from 'react'
 
-class NotFoundPage extends React.Component{
-  constructor(props){
-    super(props)
-  }
+const NotFoundPage = props => <h1 id="title">404 - Not Found.</h1>;
 
-  render(){
-    return (
-      <h1 id="title">404 - Not Found.</h1>
-    )
-  }
-}
-
-export default  NotFoundPage
+export default NotFoundPage

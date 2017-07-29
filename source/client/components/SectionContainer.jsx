@@ -1,5 +1,5 @@
 import React from 'react'
-
+import cn from 'classnames';
 import './SectionContainer.less'
 
 class SectionContainer extends React.Component {
@@ -7,28 +7,13 @@ class SectionContainer extends React.Component {
         super(props)
     }
 
-    getElementClassName() {
-        let elementClassName;
-
-        elementClassName = 'section_container';
-
-        if(this.props.additionalClassName)
-            elementClassName += ` ${this.props.additionalClassName}`
-
-        return elementClassName
-    }
 
     render() {
-        let titleElement, containerBackground;
-
-        titleElement = this.props.containerName ? <h2 className='section_container_title'>{this.props.containerName}</h2> : '';
-
-        containerBackground = {
-            backgroundImage: `url('${this.props.containerBackground}')`
-        }
+        const titleElement        = this.props.containerName ? <h2 className='section_container_title'>{this.props.containerName}</h2> : null,
+              containerBackground = {backgroundImage: `url('${this.props.containerBackground}')`};
 
         return (
-            <section className={this.getElementClassName()} style={containerBackground}>
+            <section className={cn('section_container', this.props.additionalClassName)} style={containerBackground}>
                 {titleElement}
                 {this.props.children}
             </section>
