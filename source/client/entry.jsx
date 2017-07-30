@@ -6,8 +6,10 @@ import App from './components/App'
 import {Provider} from 'react-redux'
 import {createStore} from 'redux'
 
+import {reducer} from '../modules/fsm'
 
-const store = createStore((s = {}) => s, window && window.__initialState || null);
+
+const store = createStore(reducer, window && window.__initialState || null);
 ReactDOM.render((
     <Provider store={store}>
         <BrowserRouter>
